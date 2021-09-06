@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: api
+datasource:
+  default:
+    url: ${JDBC_URL:`jdbc:postgresql://localhost:5432/myDb`}
+    usename: ${JDBC_USER:postgres}
+    password: ${JDBC_PASSWORD:"Pass2020!"}
+    driverClassName: ${JDBC_DRIVER:org.postgresql.Driver}
+    dialect: POSTGRES
+    auto-commit: true
