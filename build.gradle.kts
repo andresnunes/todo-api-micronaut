@@ -11,6 +11,8 @@ version = "0.1"
 group = "api"
 
 val kotlinVersion=project.properties.get("kotlinVersion")
+val micronautVersion=project.properties.get("micronautVersion")
+
 repositories {
     mavenCentral()
 }
@@ -32,8 +34,8 @@ dependencies {
     implementation("io.micronaut.beanvalidation:micronaut-hibernate-validator")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
-    implementation("io.micronaut:micronaut-runtime")
+    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime:${micronautVersion}")
+    implementation("io.micronaut:micronaut-runtime:${micronautVersion}")
     implementation("javax.annotation:javax.annotation-api")
     implementation("io.micronaut:micronaut-http-client")
 //    compile ('com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1')

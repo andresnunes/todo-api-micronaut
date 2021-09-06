@@ -8,7 +8,7 @@ import javax.persistence.Id
 
 @Entity
 @Introspected
-data class TodoList(
+data class TodoItem(
     @Id
     val id: Long?,
     @Column
@@ -19,7 +19,7 @@ data class TodoList(
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null || Hibernate.getClass(this) != Hibernate.getClass(other)) return false
-        other as TodoList
+        other as TodoItem
 
         return id != null && id == other.id
     }
